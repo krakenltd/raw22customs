@@ -124,6 +124,26 @@
                 "padding-inline-end": 0
               },
               "blocks": {
+                "vendor_raw": {
+                  "type": "text",
+                  "name": "Vendor",
+                  "settings": {
+                    "text": "<p>{{ closest.product.vendor }}</p>",
+                    "width": "100%",
+                    "alignment": "left",
+                    "type_preset": "h6",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.75rem",
+                    "letter_spacing": "wide",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "text_xrnftG": {
                   "type": "text",
                   "name": "t:names.product_title",
@@ -132,7 +152,7 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h3",
+                    "type_preset": "h2",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -156,7 +176,7 @@
                     "show_sale_price_first": true,
                     "show_installments": false,
                     "show_tax_info": false,
-                    "type_preset": "paragraph",
+                    "type_preset": "h5",
                     "width": "100%",
                     "alignment": "left",
                     "font": "var(--font-body--family)",
@@ -174,6 +194,7 @@
                 }
               },
               "block_order": [
+                "vendor_raw",
                 "text_xrnftG",
                 "price_tVjtKg"
               ]
@@ -191,11 +212,29 @@
               },
               "blocks": {}
             },
+            "sku_raw": {
+              "type": "sku",
+              "name": "SKU",
+              "settings": {
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "0.75rem",
+                "letter_spacing": "wide",
+                "case": "uppercase",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "variant_picker_R3rGDr": {
               "type": "variant-picker",
               "settings": {
                 "variant_style": "buttons",
-                "show_swatches": false,
+                "show_swatches": true,
                 "option_label_text_color": "",
                 "variant_style_class": "default",
                 "custom_variant_background": "{{ settings.color_palette.background }}",
@@ -303,6 +342,7 @@
           "block_order": [
             "group_icgrde",
             "divider_VJhene",
+            "sku_raw",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
             "text_aEtTtq"
@@ -315,13 +355,19 @@
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
-        "equal_columns": false,
+        "equal_columns": true,
         "limit_details_width": false,
         "gap": 48,
         "enable_sticky_add_to_cart": true,
         "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "raw_product_specs": {
+      "type": "raw-product-specs",
+      "settings": {
+        "heading": "THE DETAILS."
       }
     },
     "product_recommendations_qggXJq": {
@@ -331,7 +377,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>You may also like </h3>",
+            "text": "<h3>COMPLETE THE SETUP.</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -469,6 +515,7 @@
   },
   "order": [
     "main",
+    "raw_product_specs",
     "product_recommendations_qggXJq"
   ]
 }

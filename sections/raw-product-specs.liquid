@@ -1,0 +1,49 @@
+{% liquid
+  assign specification = product.metafields.custom.specification
+  assign compatibility = product.metafields.custom.compatibility
+  assign material = product.metafields.custom.material
+  assign weight = product.metafields.custom.weight
+  assign size = product.metafields.custom.size
+  assign installation = product.metafields.custom.installation
+  assign whats_included = product.metafields.custom.whats_included
+  assign care = product.metafields.custom.care
+  assign has_specs = false
+  if specification != blank or compatibility != blank or material != blank or weight != blank or size != blank or installation != blank or whats_included != blank or care != blank
+    assign has_specs = true
+  endif
+%}
+
+{% if has_specs %}
+  <section class="raw-product-specs raw-section raw-section--dark" aria-labelledby="RawSpecs-{{ section.id }}">
+    <div class="raw-shell raw-product-specs__grid">
+      <div>
+        <p class="raw-eyebrow">PRODUCT DETAIL</p>
+        <h2 id="RawSpecs-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+      </div>
+      <div class="raw-product-specs__items">
+        {% assign fields = 'specification,compatibility,material,weight,size,installation,whats_included,care' | split: ',' %}
+        {% assign labels = 'SPECIFICATION,COMPATIBILITY,MATERIAL,WEIGHT,SIZE,INSTALLATION,WHAT’S INCLUDED,CARE' | split: ',' %}
+        {% for field in fields %}
+          {% assign value = product.metafields.custom[field] %}
+          {% if value != blank %}
+            <details{% if forloop.first %} open{% endif %}>
+              <summary>{{ labels[forloop.index0] }} <span aria-hidden="true">+</span></summary>
+              <div class="raw-product-specs__value rte">{{ value | metafield_tag }}</div>
+            </details>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "RAW product specs",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "THE DETAILS." }
+  ],
+  "presets": [{ "name": "RAW product specs" }]
+}
+{% endschema %}

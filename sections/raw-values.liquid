@@ -1,0 +1,49 @@
+<section class="raw-section raw-section--dark raw-values" aria-labelledby="RawValues-{{ section.id }}">
+  <div class="raw-shell">
+    <div class="raw-values__intro">
+      {% if section.settings.eyebrow != blank %}<p class="raw-eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+      <h2 id="RawValues-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+    </div>
+    <div class="raw-values__grid">
+      {% for block in section.blocks %}
+        <article class="raw-value" {{ block.shopify_attributes }}>
+          <span class="raw-value__number">0{{ forloop.index }}</span>
+          <h3>{{ block.settings.heading | escape }}</h3>
+          {% if block.settings.copy != blank %}<p>{{ block.settings.copy | escape }}</p>{% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RAW values",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "THE RAW STANDARD" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "PARTS THAT EARN THEIR PLACE." }
+  ],
+  "blocks": [
+    {
+      "type": "value",
+      "name": "Value",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "RIDER-LED" },
+        { "type": "textarea", "id": "copy", "label": "Copy", "default": "A catalogue built around the way BMX, street and park riders actually shop." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RAW values",
+      "blocks": [
+        { "type": "value", "settings": { "heading": "RIDER-LED", "copy": "Straightforward product detail and navigation shaped around the ride." } },
+        { "type": "value", "settings": { "heading": "CUSTOM BUILDS", "copy": "A clear route from first idea to a complete, considered setup." } },
+        { "type": "value", "settings": { "heading": "PREMIUM PARTS", "copy": "Components presented with the specifications that matter." } },
+        { "type": "value", "settings": { "heading": "RAW / 22", "copy": "Own-label apparel with understated workshop and street influence." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

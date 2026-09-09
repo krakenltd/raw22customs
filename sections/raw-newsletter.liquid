@@ -1,0 +1,43 @@
+<section class="raw-newsletter" aria-labelledby="RawNewsletter-{{ section.id }}">
+  <div class="raw-shell raw-newsletter__grid">
+    <div class="raw-newsletter__content">
+      {% if section.settings.eyebrow != blank %}<p class="raw-eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+      <h2 id="RawNewsletter-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+      {% if section.settings.copy != blank %}<div class="raw-newsletter__copy">{{ section.settings.copy }}</div>{% endif %}
+    </div>
+    {% form 'customer', class: 'raw-newsletter__form' %}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class="raw-newsletter__field">
+        <label class="visually-hidden" for="RawNewsletterEmail-{{ section.id }}">Email address</label>
+        <input
+          id="RawNewsletterEmail-{{ section.id }}"
+          type="email"
+          name="contact[email]"
+          value="{{ form.email }}"
+          autocomplete="email"
+          autocorrect="off"
+          autocapitalize="off"
+          placeholder="EMAIL ADDRESS"
+          required
+        >
+        <button type="submit">{{ section.settings.button_label | escape }} →</button>
+      </div>
+      {% if form.posted_successfully? %}<p class="raw-newsletter__message" tabindex="-1" autofocus>{{ section.settings.success_message | escape }}</p>{% endif %}
+      {% if form.errors %}<div class="raw-newsletter__message" role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RAW newsletter",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "NO NOISE. JUST THE GOOD STUFF." },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "JOIN THE CREW." },
+    { "type": "richtext", "id": "copy", "label": "Copy", "default": "<p>New drops, build inspiration and workshop notes—sent when there is something worth saying.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button", "default": "SIGN UP" },
+    { "type": "text", "id": "success_message", "label": "Success message", "default": "YOU’RE ON THE LIST." }
+  ],
+  "presets": [{ "name": "RAW newsletter" }]
+}
+{% endschema %}

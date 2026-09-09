@@ -1,285 +1,114 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
-    "hero_jVaWmY": {
-      "type": "hero",
-      "blocks": {
-        "text_YLPk4p": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<p>Browse our latest products</p>",
-            "text_color": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "button_H9gpTf": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Shop all",
-            "link": "shopify://collections/all",
-            "open_in_new_tab": false,
-            "style_class": "button-custom",
-            "custom_button_background": "rgba(0,0,0,0)",
-            "custom_button_text": "{{ settings.color_palette.background }}",
-            "custom_button_border": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_YLPk4p",
-        "button_H9gpTf"
-      ],
-      "name": "t:names.hero",
+    "raw_hero": {
+      "type": "raw-hero",
       "settings": {
-        "media_type_1": "image",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 24,
-        "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "background_color": "rgba(0,0,0,0)",
-        "toggle_overlay": true,
-        "overlay_color": "#12121266",
-        "overlay_style": "solid",
-        "gradient_direction": "to bottom",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 100,
-        "padding-block-end": 72
+        "eyebrow": "RAW CUSTOMS / EST. 2022",
+        "heading": "BUILT TO BE RIDDEN.",
+        "copy": "<p>BMX, custom builds, parts and streetwear selected with purpose.</p>",
+        "primary_label": "SHOP BMX",
+        "primary_link": "shopify://collections/all",
+        "secondary_label": "SHOP PARTS",
+        "secondary_link": "shopify://collections/all",
+        "show_facts": true,
+        "fact_1_label": "DEPARTMENT 01",
+        "fact_1_value": "BMX + BUILDS",
+        "fact_2_label": "DEPARTMENT 02",
+        "fact_2_value": "PARTS + COMPONENTS",
+        "fact_3_label": "DEPARTMENT 03",
+        "fact_3_value": "RAW / 22 APPAREL"
       }
     },
-    "product_list_fa6P9H": {
-      "type": "product-list",
+    "raw_categories": {
+      "type": "raw-category-mosaic",
       "blocks": {
-        "static-header": {
-          "type": "_product-list-content",
-          "name": "t:names.header",
-          "static": true,
-          "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": false,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_list_text_YFtzcL": {
-              "type": "_product-list-text",
-              "name": "t:names.collection_title",
-              "settings": {
-                "text": "<h3>{{ closest.collection.title }}</h3>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_list_button_MWeP9V": {
-              "type": "_product-list-button",
-              "name": "t:names.product_list_button",
-              "settings": {
-                "label": "View all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_list_text_YFtzcL",
-            "product_list_button_MWeP9V"
-          ]
-        },
-        "static-product-card": {
-          "type": "_product-card",
-          "name": "t:names.product_card",
-          "static": true,
-          "settings": {
-            "product_card_gap": 4,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_card_gallery_677WP3": {
-              "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
-              "settings": {
-                "image_ratio": "adapt",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_title_YXxMTj": {
-              "type": "product-title",
-              "name": "t:names.product_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 4,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "price_JQzVV4": {
-              "type": "price",
-              "name": "t:names.product_price",
-              "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h6",
-                "width": "100%",
-                "alignment": "left",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_card_gallery_677WP3",
-            "product_title_YXxMTj",
-            "price_JQzVV4"
-          ]
-        }
+        "bmx": { "type": "category", "settings": { "kicker": "BIKES / BUILDS", "title": "BMX", "fallback_asset": "raw-bike-graphite.jpg" } },
+        "parts": { "type": "category", "settings": { "kicker": "DIALED BY DETAIL", "title": "PARTS", "fallback_asset": "raw-bike-olive.jpg" } },
+        "clothing": { "type": "category", "settings": { "kicker": "RAW / 22 LABEL", "title": "CLOTHING", "fallback_asset": "raw-apparel-lookbook.jpg" } },
+        "footwear": { "type": "category", "settings": { "kicker": "LOW PROFILE", "title": "FOOTWEAR", "fallback_asset": "raw-shoe-navy.jpg" } },
+        "raw_label": { "type": "category", "settings": { "kicker": "OWN LABEL", "title": "RAW / 22", "fallback_asset": "raw-apparel-vintage.jpg" } },
+        "accessories": { "type": "category", "settings": { "kicker": "CARRY / HEADWEAR", "title": "ACCESSORIES", "fallback_asset": "raw-backpack-dark.jpg" } }
       },
-      "name": "t:names.product_list",
+      "block_order": ["bmx", "parts", "clothing", "footwear", "raw_label", "accessories"],
+      "settings": { "eyebrow": "THE CATALOGUE", "heading": "FIND YOUR LINE.", "link_label": "EXPLORE ALL" }
+    },
+    "raw_products": {
+      "type": "raw-product-showcase",
+      "settings": { "eyebrow": "FRESH THROUGH THE DOOR", "heading": "NEW IN.", "collection": "all", "product_limit": 8, "link_label": "VIEW ALL" }
+    },
+    "raw_build": {
+      "type": "raw-editorial-split",
       "settings": {
-        "collection": "all",
-        "layout_type": "grid",
-        "carousel_on_mobile": false,
-        "max_products": 8,
-        "columns": 4,
-        "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 8,
-        "rows_gap": 24,
-        "icons_style": "arrow",
-        "icons_shape": "none",
-        "section_width": "page-width",
-        "horizontal_alignment": "flex-start",
-        "gap": 28,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "theme": "dark",
+        "reverse": false,
+        "index": "RAW / SERVICE 01",
+        "eyebrow": "CUSTOM BMX BUILDS",
+        "heading": "YOUR BIKE. YOUR WAY.",
+        "copy": "<p>Frame. Fork. Bars. Wheels. Every detail considered around how you ride.</p>",
+        "button_label": "BUILD YOUR BMX",
+        "image_alt": "Graphite RAW Customs BMX",
+        "fallback_asset": "raw-bike-graphite.jpg",
+        "show_steps": true,
+        "steps_label": "Custom build process",
+        "step_1": "DIRECTION",
+        "step_2": "FRAME",
+        "step_3": "COMPONENTS",
+        "step_4": "FINISH"
+      }
+    },
+    "raw_lookbook": {
+      "type": "raw-lookbook",
+      "blocks": {
+        "look_1": { "type": "image", "settings": { "caption": "RAW / 22 — MADE FOR AFTER THE SESSION", "fallback_asset": "raw-apparel-lookbook.jpg" } },
+        "look_2": { "type": "image", "settings": { "caption": "WORKWEAR / BUILT FOR DAILY USE", "fallback_asset": "raw-apparel-vintage.jpg" } },
+        "look_3": { "type": "image", "settings": { "caption": "CARRY / FIELD KIT", "fallback_asset": "raw-backpack-dark.jpg" } },
+        "look_4": { "type": "image", "settings": { "caption": "HEADWEAR / MUTED TONES", "fallback_asset": "raw-beanies-lineup.jpg" } },
+        "look_5": { "type": "image", "settings": { "caption": "FOOTWEAR / LOW PROFILE", "fallback_asset": "raw-shoe-black.jpg" } }
+      },
+      "block_order": ["look_1", "look_2", "look_3", "look_4", "look_5"],
+      "settings": { "eyebrow": "RAW / 22", "heading": "AFTER THE SESSION.", "link_label": "SHOP THE RANGE" }
+    },
+    "raw_apparel": {
+      "type": "raw-editorial-split",
+      "settings": {
+        "theme": "paper",
+        "reverse": true,
+        "index": "RAW / LABEL 22",
+        "eyebrow": "OWN LABEL",
+        "heading": "MORE THAN CLOTHING.",
+        "copy": "<p>Washed textures, workwear colour and quiet branding. Designed to sit naturally in the workshop, on the street and everywhere after.</p>",
+        "button_label": "SHOP RAW",
+        "image_alt": "RAW Customs clothing range",
+        "fallback_asset": "raw-clothing-lineup.jpg",
+        "show_steps": false,
+        "steps_label": "",
+        "step_1": "",
+        "step_2": "",
+        "step_3": "",
+        "step_4": ""
+      }
+    },
+    "raw_values": {
+      "type": "raw-values",
+      "blocks": {
+        "value_1": { "type": "value", "settings": { "heading": "RIDER-LED", "copy": "Straightforward product detail and navigation shaped around the ride." } },
+        "value_2": { "type": "value", "settings": { "heading": "CUSTOM BUILDS", "copy": "A clear route from first idea to a complete, considered setup." } },
+        "value_3": { "type": "value", "settings": { "heading": "PREMIUM PARTS", "copy": "Components presented with the specifications that matter." } },
+        "value_4": { "type": "value", "settings": { "heading": "RAW / 22", "copy": "Own-label apparel with understated workshop and street influence." } }
+      },
+      "block_order": ["value_1", "value_2", "value_3", "value_4"],
+      "settings": { "eyebrow": "THE RAW STANDARD", "heading": "PARTS THAT EARN THEIR PLACE." }
+    },
+    "raw_newsletter": {
+      "type": "raw-newsletter",
+      "settings": {
+        "eyebrow": "NO NOISE. JUST THE GOOD STUFF.",
+        "heading": "JOIN THE CREW.",
+        "copy": "<p>New drops, build inspiration and workshop notes—sent when there is something worth saying.</p>",
+        "button_label": "SIGN UP",
+        "success_message": "YOU’RE ON THE LIST."
       }
     }
   },
-  "order": [
-    "hero_jVaWmY",
-    "product_list_fa6P9H"
-  ]
+  "order": ["raw_hero", "raw_categories", "raw_products", "raw_build", "raw_lookbook", "raw_apparel", "raw_values", "raw_newsletter"]
 }

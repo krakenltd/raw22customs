@@ -1,0 +1,47 @@
+{% liquid
+  assign story_heading = section.settings.heading | default: page.title
+%}
+<section class="raw-page-story raw-section raw-section--dark" aria-labelledby="RawPageStory-{{ section.id }}">
+  <div class="raw-shell raw-page-story__grid">
+    <div class="raw-page-story__content">
+      {% if section.settings.eyebrow != blank %}<p class="raw-eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+      <h1 id="RawPageStory-{{ section.id }}">{{ story_heading | escape }}</h1>
+      {% if section.settings.intro != blank %}<div class="raw-page-story__intro">{{ section.settings.intro }}</div>{% endif %}
+    </div>
+    <div class="raw-page-story__media">
+      {% render 'raw-brand-media', image: section.settings.image, asset_name: section.settings.fallback_asset, alt: section.settings.image_alt, sizes: '(min-width: 990px) 44vw, 100vw', loading: 'eager' %}
+    </div>
+  </div>
+  {% if section.settings.show_page_content and page.content != blank %}
+    <div class="raw-shell raw-page-story__body rte">{{ page.content }}</div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "RAW page story",
+  "enabled_on": { "templates": ["page"] },
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "RAW CUSTOMS / 22" },
+    { "type": "text", "id": "heading", "label": "Heading override" },
+    { "type": "richtext", "id": "intro", "label": "Intro", "default": "<p>Built around the ride, the workshop and the people who keep showing up.</p>" },
+    { "type": "checkbox", "id": "show_page_content", "label": "Show page content", "default": true },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "image_alt", "label": "Image alt text", "default": "RAW Customs" },
+    {
+      "type": "select",
+      "id": "fallback_asset",
+      "label": "Bundled fallback image",
+      "default": "raw-apparel-lookbook.jpg",
+      "options": [
+        { "value": "raw-apparel-lookbook.jpg", "label": "Charcoal apparel look" },
+        { "value": "raw-apparel-vintage.jpg", "label": "Vintage apparel range" },
+        { "value": "raw-bike-graphite.jpg", "label": "Graphite BMX" },
+        { "value": "raw-bike-blue.jpg", "label": "Blue BMX" },
+        { "value": "raw-backpack-dark.jpg", "label": "Backpack" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "RAW page story" }]
+}
+{% endschema %}

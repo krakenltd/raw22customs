@@ -1,0 +1,60 @@
+<section class="raw-process raw-section raw-section--paper" aria-labelledby="RawProcess-{{ section.id }}">
+  <div class="raw-shell">
+    <header class="raw-section-heading">
+      <div>
+        {% if section.settings.eyebrow != blank %}<p class="raw-eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+        <h2 id="RawProcess-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+      </div>
+      {% if section.settings.link_label != blank and section.settings.link != blank %}<a class="raw-arrow-link" href="{{ section.settings.link }}">{{ section.settings.link_label | escape }}</a>{% endif %}
+    </header>
+    <ol class="raw-process__grid">
+      {% for block in section.blocks %}
+        <li class="raw-process__step" {{ block.shopify_attributes }}>
+          <span>0{{ forloop.index }}</span>
+          <h3>{{ block.settings.heading | escape }}</h3>
+          {% if block.settings.copy != blank %}<p>{{ block.settings.copy | escape }}</p>{% endif %}
+          {% if block.settings.link != blank %}<a href="{{ block.settings.link }}" aria-label="{{ block.settings.link_label | default: block.settings.heading | escape }}">{{ block.settings.link_label | default: 'EXPLORE' | escape }} →</a>{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RAW build process",
+  "max_blocks": 6,
+  "enabled_on": { "templates": ["page"] },
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "THE PROCESS" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "BUILD SOMETHING BETTER." },
+    { "type": "text", "id": "link_label", "label": "Main link label", "default": "TALK TO RAW" },
+    { "type": "url", "id": "link", "label": "Main link" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "CHOOSE YOUR DIRECTION" },
+        { "type": "textarea", "id": "copy", "label": "Copy", "default": "Start with the way you ride and the feel you want from the finished bike." },
+        { "type": "text", "id": "link_label", "label": "Link label" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RAW build process",
+      "blocks": [
+        { "type": "step", "settings": { "heading": "CHOOSE YOUR DIRECTION", "copy": "Street, park, trails or an all-round setup—start with how you ride." } },
+        { "type": "step", "settings": { "heading": "SELECT A FRAME", "copy": "Build the geometry, size and character of the bike around the right foundation." } },
+        { "type": "step", "settings": { "heading": "DIAL THE COCKPIT", "copy": "Bars, stem, grips and front end chosen for a confident fit." } },
+        { "type": "step", "settings": { "heading": "CHOOSE COMPONENTS", "copy": "Drivetrain, wheels and braking brought together as one coherent setup." } },
+        { "type": "step", "settings": { "heading": "FINISH THE DETAILS", "copy": "Colour, contact points and final touches that make the build yours." } },
+        { "type": "step", "settings": { "heading": "TALK TO RAW", "copy": "Turn the shortlist into an enquiry and confirm the final specification." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

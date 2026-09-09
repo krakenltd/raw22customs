@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "story": {
+      "type": "raw-page-story",
+      "settings": {
+        "eyebrow": "RAW / CUSTOM BMX",
+        "heading": "YOUR BIKE. YOUR WAY.",
+        "intro": "<p>Start with how you ride. Build the frame, cockpit, wheels and finishing details into one complete setup.</p>",
+        "show_page_content": true,
+        "image_alt": "Custom RAW BMX",
+        "fallback_asset": "raw-bike-graphite.jpg"
+      }
+    },
+    "process": {
+      "type": "raw-process",
+      "blocks": {
+        "step_1": { "type": "step", "settings": { "heading": "CHOOSE YOUR DIRECTION", "copy": "Street, park, trails or an all-round setup—start with how you ride." } },
+        "step_2": { "type": "step", "settings": { "heading": "SELECT A FRAME", "copy": "Build the geometry, size and character of the bike around the right foundation." } },
+        "step_3": { "type": "step", "settings": { "heading": "DIAL THE COCKPIT", "copy": "Bars, stem, grips and front end chosen for a confident fit." } },
+        "step_4": { "type": "step", "settings": { "heading": "CHOOSE COMPONENTS", "copy": "Drivetrain, wheels and braking brought together as one coherent setup." } },
+        "step_5": { "type": "step", "settings": { "heading": "FINISH THE DETAILS", "copy": "Colour, contact points and final touches that make the build yours." } },
+        "step_6": { "type": "step", "settings": { "heading": "TALK TO RAW", "copy": "Turn the shortlist into an enquiry and confirm the final specification." } }
+      },
+      "block_order": ["step_1", "step_2", "step_3", "step_4", "step_5", "step_6"],
+      "settings": { "eyebrow": "THE PROCESS", "heading": "BUILD SOMETHING BETTER.", "link_label": "TALK TO RAW" }
+    },
+    "bike_colours": {
+      "type": "raw-lookbook",
+      "blocks": {
+        "bike_1": { "type": "image", "settings": { "caption": "GRAPHITE / AGED GOLD", "fallback_asset": "raw-bike-graphite.jpg" } },
+        "bike_2": { "type": "image", "settings": { "caption": "OLIVE / CREAM", "fallback_asset": "raw-bike-olive.jpg" } },
+        "bike_3": { "type": "image", "settings": { "caption": "BLUE / CLAY", "fallback_asset": "raw-bike-blue.jpg" } },
+        "bike_4": { "type": "image", "settings": { "caption": "LILAC / MINT", "fallback_asset": "raw-bike-lilac.jpg" } }
+      },
+      "block_order": ["bike_1", "bike_2", "bike_3", "bike_4"],
+      "settings": { "eyebrow": "DIRECTION / NOT A CONFIGURATOR", "heading": "MAKE IT YOURS.", "link_label": "SHOP BMX" }
+    }
+  },
+  "order": ["story", "process", "bike_colours"]
+}

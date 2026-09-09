@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "story": {
+      "type": "raw-page-story",
+      "settings": {
+        "eyebrow": "RAW CUSTOMS / 22",
+        "heading": "BUILT AROUND THE RIDE.",
+        "intro": "<p>BMX, clothing and components brought together with workshop grit, street influence and a clear point of view.</p>",
+        "show_page_content": true,
+        "image_alt": "RAW Customs apparel",
+        "fallback_asset": "raw-apparel-lookbook.jpg"
+      }
+    },
+    "lookbook": {
+      "type": "raw-lookbook",
+      "blocks": {
+        "image_1": { "type": "image", "settings": { "caption": "THE WORKSHOP / THE STREET", "fallback_asset": "raw-apparel-vintage.jpg" } },
+        "image_2": { "type": "image", "settings": { "caption": "RAW / 22 OWN LABEL", "fallback_asset": "raw-clothing-lineup.jpg" } },
+        "image_3": { "type": "image", "settings": { "caption": "BUILT AROUND THE RIDE", "fallback_asset": "raw-bike-graphite.jpg" } },
+        "image_4": { "type": "image", "settings": { "caption": "DAILY KIT", "fallback_asset": "raw-backpack-dark.jpg" } }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": { "eyebrow": "FIELD NOTES / 01", "heading": "THE RAW WORLD.", "link_label": "SHOP RAW" }
+    },
+    "newsletter": {
+      "type": "raw-newsletter",
+      "settings": { "eyebrow": "STAY IN THE LOOP", "heading": "JOIN THE CREW.", "copy": "<p>New drops, build inspiration and workshop notes—sent when there is something worth saying.</p>", "button_label": "SIGN UP", "success_message": "YOU’RE ON THE LIST." }
+    }
+  },
+  "order": ["story", "lookbook", "newsletter"]
+}
