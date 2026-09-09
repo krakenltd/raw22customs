@@ -57,14 +57,22 @@
     {% endif %}
     data-testid="header-logo"
   >
-    {% render 'image',
-      image: settings.logo,
-      class: 'header-logo__image',
-      height: settings.logo_height,
-      alt_text_fallback: alt_text_fallback,
-      text_fallback: shop.name,
-      style: logo_style
-    %}
+    {% if settings.logo != blank %}
+      {% render 'image',
+        image: settings.logo,
+        class: 'header-logo__image',
+        height: settings.logo_height,
+        alt_text_fallback: alt_text_fallback,
+        text_fallback: shop.name,
+        style: logo_style
+      %}
+    {% else %}
+      <span class="raw-wordmark" aria-label="RAW Customs 22">
+        <span class="raw-wordmark__raw">RAW</span>
+        <span class="raw-wordmark__customs">Customs</span>
+        <sup>22</sup>
+      </span>
+    {% endif %}
   </span>
 
   {% if use_inverse_logo %}
